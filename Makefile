@@ -4,6 +4,10 @@ build:
 	$(shell sed -E -i '' -e "s/^var version = \"[A-Za-z0-9\.-_]+\"/var version = \"$(VERSION)\"/" main.go)
 	go build -o bin/scmpuff -mod=readonly -ldflags "-X main.version=$(VERSION)"
 
+# assumes standard ~/go/bin directory
+install: build
+	cp bin/scmpuff ~/go/bin/
+
 # run unit tests
 test:
 	go test ./...
