@@ -12,21 +12,14 @@ It is focused on simplicity, speed, robustness, and cross-platform support. The
 majority of the functionality is contained within a compiled binary, and the
 shell integration is under 100 lines of shell script.
 
-**scmpuff** currently has built-in support for `bash`, `zsh`, and `fish`.
+**scmpuff** currently has built-in support for `bash`, `zsh`, `fish` and `powershell`.
 
 [scmbreeze]: https://github.com/ndbroadbent/scm_breeze
 
 
 ## Installation
 
-[Download] the binary for your platform, and copy it to `/usr/local/bin` or
-somewhere else in your  default path.
-
-Alternately, if you use [Homebrew], you can just: `brew install scmpuff`.
-
-[download]: https://github.com/mroth/scmpuff/releases/latest
-[Homebrew]: https://brew.sh
-
+`go install github.com/kmatt/scmpuff@latest` or `make` from a source directory.
 
 ## Setup
 
