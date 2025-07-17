@@ -3,6 +3,8 @@
 > Makes working with git from the command line quicker by substituting numeric
 shortcuts for files.
 
+### This is a fork of https://github.com/mroth/scmpuff with some adjustments for Windows. That parent repo may be better suited for general use.
+
 <img width=568 src="http://f.cl.ly/items/2726271z170L2y0K3d0b/scmpuff_screenshot.png">
 
 **scmpuff** is a minimalistic reinterpretation of the core functionality of
