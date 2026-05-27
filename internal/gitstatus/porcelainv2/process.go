@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
+	"github.com/kmatt/scmpuff/internal/gitstatus"
 	"github.com/mroth/porcelain/statusv2"
-	"github.com/mroth/scmpuff/internal/gitstatus"
 )
 
 // Process takes the raw output of `git status --porcelain=v2 -b -z` and

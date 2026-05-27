@@ -2,7 +2,7 @@ package status
 
 import (
 	"github.com/fatih/color"
-	"github.com/mroth/scmpuff/internal/gitstatus"
+	"github.com/kmatt/scmpuff/internal/gitstatus"
 )
 
 // Color definitions using fatih/color for cross-platform terminal support.

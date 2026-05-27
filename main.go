@@ -4,7 +4,7 @@ import (
 	_ "embed"
 
 	goversion "github.com/caarlos0/go-version"
-	"github.com/mroth/scmpuff/internal/cmd"
+	"github.com/kmatt/scmpuff/internal/cmd"
 )
 
 var (
@@ -31,7 +31,7 @@ var asciiArt = `                                    ________
 
 func buildVersion(version, commit, date, builtBy, treeState string) goversion.Info {
 	return goversion.GetVersionInfo(
-		goversion.WithAppDetails("scmpuff", "Git by the numbers.", "https://github.com/mroth/scmpuff"),
+		goversion.WithAppDetails("scmpuff", "Git by the numbers (kmatt's fork)", "https://github.com/mroth/scmpuff"),
 		goversion.WithASCIIName(asciiArt),
 		func(i *goversion.Info) {
 			if commit != "" {

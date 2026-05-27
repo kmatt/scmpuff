@@ -5,12 +5,12 @@ import (
 	"os"
 
 	goversion "github.com/caarlos0/go-version"
-	"github.com/mroth/scmpuff/internal/cmd/debug"
-	"github.com/mroth/scmpuff/internal/cmd/exec"
-	"github.com/mroth/scmpuff/internal/cmd/expand"
-	"github.com/mroth/scmpuff/internal/cmd/inits"
-	"github.com/mroth/scmpuff/internal/cmd/intro"
-	"github.com/mroth/scmpuff/internal/cmd/status"
+	"github.com/kmatt/scmpuff/internal/cmd/debug"
+	"github.com/kmatt/scmpuff/internal/cmd/exec"
+	"github.com/kmatt/scmpuff/internal/cmd/expand"
+	"github.com/kmatt/scmpuff/internal/cmd/inits"
+	"github.com/kmatt/scmpuff/internal/cmd/intro"
+	"github.com/kmatt/scmpuff/internal/cmd/status"
 	"github.com/spf13/cobra"
 )
 

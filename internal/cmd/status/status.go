@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 
 	"github.com/fatih/color"
+	"github.com/kmatt/scmpuff/internal/gitstatus/porcelainv2"
 	"github.com/mattn/go-isatty"
-	"github.com/mroth/scmpuff/internal/gitstatus/porcelainv2"
 	"github.com/spf13/cobra"
 )
 
