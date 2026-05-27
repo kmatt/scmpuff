@@ -27,7 +27,7 @@ shell integration is under 100 lines of shell script.
 
 Currently scmpuff supports bash, zsh and fish for all functionality.
 
-To initialize shell functions, add the following to your `~/.bash_profile` or
+To initialize shell functions, add the following to your `~/.bashrc` or
 `~/.zshrc` file:
 
     eval "$(scmpuff init -s)"
