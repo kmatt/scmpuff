@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+	"name": "Go",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/go:1.26-trixie",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		// Fish shell for integration tests (bash and zsh installed by default)
+		"ghcr.io/meaningful-ooo/devcontainer-features/fish:2": {
+			"fisher": false
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "go mod download",
+
+	// Keep testscript temp artifacts on tmpfs via GOTMPDIR.
+	"containerEnv": {
+		"GOTMPDIR": "/tmp"
+	},
+	"runArgs": [
+		"--tmpfs=/tmp:exec,mode=1777"
+	],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				// Fish devcontainer feature will try to set itself as the default shell, but
+				// we just want it available for integration tests.
+				"terminal.integrated.defaultProfile.linux": "bash"
+			},
+			"extensions": [
+				"timonwong.shellcheck",
+				"brody715.txtar"
+			]
+		}
+	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

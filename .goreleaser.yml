@@ -1,6 +1,5 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
-
 version: 2
 
 before:
@@ -22,8 +21,23 @@ builds:
       - linux
       - windows
       - darwin
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - "7"
+    ignore:
+      - goos: windows
+        goarch: arm
+    flags:
+      - -trimpath
     ldflags:
-      - -s -w -X main.version={{.Version}}
+      - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{ .CommitDate }} -X main.builtBy=goreleaser -X main.treeState={{ .IsGitDirty }}
+
+# config the checksum filename to be predictable
+checksum:
+  name_template: "checksums.txt"
 
 archives:
   - formats: ["tar.gz"]
@@ -39,15 +53,3 @@ release:
   # If set to auto, will mark the release as not ready for production
   # in case there is an indicator for this in the tag e.g. v1.0.0-rc1
   prerelease: auto
-
-brews:
-  - name: scmpuff
-    description: Adds numbered shortcuts for common git commands.
-    homepage: https://mroth.github.io/scmpuff/
-    license: MIT
-    repository:
-      owner: mroth
-      name: homebrew-tap
-    test: |
-      ENV["e1"] = "abc"
-      assert_equal "abc", shell_output("#{bin}/scmpuff expand 1").strip

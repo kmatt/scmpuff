@@ -1,8 +1,6 @@
 bin/
 dist/
-tmp/
-.bundle/
 _site/
-Gemfile.lock
+plans/
 .goxc.local.json
 *.exe
